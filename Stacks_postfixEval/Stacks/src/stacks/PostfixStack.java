@@ -39,7 +39,7 @@ public class PostfixStack {
             ** push it into the stack
             */
             if(Character.isDigit(ch)){
-                stack.push(ch - '0');
+                stack.push(Character.getNumericValue(exp.charAt(i)));
 
             }else{
                 /*if an operator is met, pop the last two
@@ -71,12 +71,14 @@ public class PostfixStack {
                     case '-': 
                         stack.push(num2 - num1);
                         break;
+                    /*I plan on playing with this in order to fix it.    
                     case '(': //throws an exception when used
                         stack.pop();
                         break;
                     case ')': //throws an exception when used
                         stack.pop();
                         break;
+                    */
                     default: 
                         System.out.println("Error!");
                 }
