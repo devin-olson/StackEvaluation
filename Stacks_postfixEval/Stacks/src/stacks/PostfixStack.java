@@ -62,7 +62,10 @@ public class PostfixStack {
                     case '*': 
                         stack.push(num2 * num1);
                         break;
-                    case '/': 
+                    
+                    //I need to add logic to prevent a divide by zero as well
+                    //as make sure it can display a decimal.
+                    case '/': //broken at the moment
                         stack.push(num2 / num1);
                         break;
                     case '+': 
